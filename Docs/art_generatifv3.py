@@ -4,7 +4,7 @@ from random import randint,uniform
 from cmath import cos, cosh,sinh,sin
 from math import ceil
 import numpy as np
-#from noise import pnoise2
+from noise import pnoise2
 
 
 #------------------------------------------------------------------------------
