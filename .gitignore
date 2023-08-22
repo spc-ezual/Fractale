@@ -1,0 +1,8 @@
+.metals
+.vscode
+project
+target
+.dist
+.bsp
+.bloop
+log

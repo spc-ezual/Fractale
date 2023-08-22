@@ -1,0 +1,25 @@
+
+@startuml Fractale
+
+
+package Application{
+    interface Fractale {
+        ui
+        top(): MainFrame
+        reinit():Unit
+    }
+    interface UI{
+        menu deroulant 
+    }
+}
+
+
+
+CreationListMotClef --> CreationDeRep
+BDLang --|> LangDAO
+BDListLieux--|> ListLieuxDAO
+Avatar --> MachineImpl
+CreationDeRep --> MachineImpl
+
+
+@enduml
