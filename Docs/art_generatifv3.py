@@ -4,7 +4,7 @@ from random import randint,uniform
 from cmath import cos, cosh,sinh,sin
 from math import ceil
 import numpy as np
-from noise import pnoise2
+#from noise import pnoise2
 
 
 #------------------------------------------------------------------------------
@@ -202,7 +202,7 @@ def creation_chemin(taille,font=(0,0,0),coul=(randint(10,256),randint(10,256),ra
     print(toto)
 #-------------------------------------------------------------------------------
 #noise map
-
+"""
 def map_noise(taille,echelle,couche,impacte,lacunariter,graine):
     world = np.zeros(taille)
     x_idx,y_idx = np.linspace(0, 1, taille[0]),np.linspace(0, 1, taille[1])
@@ -240,7 +240,7 @@ def creation_map(taille,sortie="Couleur",couche=4,impacte=0.5,lacunariter=2,matr
     b=time.time()
     toto=b-a
     print(toto)
-
+"""
 ##creation_julia((2500,2500),constante=complex(0,1))
 ##creation_chemin((250,250),(27,33,44))
 #-------------------------------------------------------------------------------

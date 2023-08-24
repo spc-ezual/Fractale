@@ -1,4 +1,5 @@
 import mathematiques.Complexe
+import outils.Triangle
 
 object Main extends App {
   val c1 = new Complexe(3, 4)
@@ -31,4 +32,8 @@ object Main extends App {
 
   println(s"Cosinus de c1 : $cosinusC1")
   println(s"Sinus de c2 : $sinusC2")
+
+  println("-------------------------------------")
+  var a = Triangle;
+  a.generateSierpinski(1000,1000,5,true,"test",(100,100,100),(200,200,200))
 }

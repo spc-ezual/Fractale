@@ -1,5 +1,4 @@
 package outils
 
 object Dragon{
-    
 }
