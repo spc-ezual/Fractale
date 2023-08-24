@@ -23,10 +23,10 @@ object Triangle{
       * @param i nombres d'iteration
       * @param equi boolean de si equilateral ou non 
       * @param nom nom du fichier
-      * @param font couleur de font en rgb
+      * @param fond couleur de fond en rgb
       * @param couleur couleur de l'image en rgb
       */
-    def generateSierpinski(l : Int , h :Int, i : Int, equi : Boolean, nom : String , font : (Int,Int,Int),couleur : (Int,Int,Int)){
+    def generateSierpinski(l : Int , h :Int, i : Int, equi : Boolean, nom : String , fond : (Int,Int,Int),couleur : (Int,Int,Int)){
         var a,b,c :(Int,Int)=(0,0);
         if(equi){
             //TODO 3 cas si h<l , h>l , h=l peut etre que h=l <=> h>l ???
@@ -41,7 +41,7 @@ object Triangle{
         val image = new BufferedImage(l, h, BufferedImage.TYPE_INT_RGB)
         val graphics = image.createGraphics()
 
-        graphics.setColor(new Color(font._1,font._2,font._3))
+        graphics.setColor(new Color(fond._1,fond._2,fond._3))
         graphics.fillRect(0, 0, l, h)
 
         graphics.dispose()

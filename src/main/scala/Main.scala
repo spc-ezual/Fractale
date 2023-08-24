@@ -1,5 +1,6 @@
 import mathematiques.Complexe
 import outils.Triangle
+import outils.Dragon
 
 object Main extends App {
   val c1 = new Complexe(3, 4)
@@ -36,4 +37,6 @@ object Main extends App {
   println("-------------------------------------")
   var a = Triangle;
   a.generateSierpinski(1000,1000,5,true,"test",(100,100,100),(200,200,200))
+  var b = Dragon
+  b.generateDragon(3000,3000,10,(0,0,0),(200,200,200),"test",-1)
 }

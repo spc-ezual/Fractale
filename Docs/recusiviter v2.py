@@ -66,18 +66,18 @@ def cantor(taille,font=(0,0,0),coul=(255,255,255),asymétrique=False):
 #-------------------------------------------------------------------------------
 # Courbe du dragon
 
-def courbe_dra(calc,AB,sense,rep):
+def courbe_dra(calc,AB,sense,rep,coul):
     if rep==0:
-        return calc.line(AB,(255,255,255),2)
+        return calc.line(AB,coul,2)
     image_de_b=(AB[0][0] + sense * (AB[0][1] - AB[1][1]), AB[0][1] + sense * (- AB[0][0]  +AB[1][0]))
     mid=((AB[1][0]+image_de_b[0])/2,(AB[1][1]+image_de_b[1])/2)
-    return courbe_dra(calc,[AB[0],mid],1,rep-1),courbe_dra(calc,[mid,AB[1]],-1,rep-1)
+    return courbe_dra(calc,[AB[0],mid],1,rep-1,coul),courbe_dra(calc,[mid,AB[1]],-1,rep-1,coul)
 
 def courbe_du_dragon(taille,rep,fond=(0,0,0),coul=(255,255,255),sense=-1):
     a=time.time()
-    img=Image.new("RGB",taille, (27,33,44))
+    img=Image.new("RGB",taille, fond)
     calc=ImageDraw.Draw(img)
-    courbe_dra(calc,[(taille[0]/4,taille[1]/2),(taille[0]*0.75,taille[1]/2)],sense,rep)
+    courbe_dra(calc,[(taille[0]/4,taille[1]/2),(taille[0]*0.75,taille[1]/2)],sense,rep,coul)
     img.save("courbe_du_dragon_{}.jpg".format(rep))
     b=time.time()
     print(b-a)
@@ -287,3 +287,4 @@ def creation_tapi(rep=int,taille=1000,font=(0,0,0),coul=(255,255,255)):
 
 #creation_tapi(15,10000)
 #Sierpiński((1000,1000),5,(100,100,100),(200,200,200))
+courbe_du_dragon((1000,1000),10,(50,50,50),(50,250,0))
