@@ -1,0 +1,32 @@
+idée : 
+quand l'on entre des coordonner pour les julia / mandelbrot  l'on pourrait ajouter une echelle afin qu'il y es une meilleur pression 
+-> meilleur perf sur de grand nombre plutot que sur des nombres tres petit 10^-9 ou plus petit 
+
+trouver un meilleur degradé que la longeur d'onde ou les nuance de gris
+
+pour Buddhabrot peut etre créé un grand tableau avec une pression 
+-> couleur basé sur le plsu grand nombre d'iteration sur un point ainsi que 
+exemple : max i=1,j=0.5 avec 2336 iterartion sur le point avec une presision de 500
+
+
+UI:
+Possibiliter de selectionné si l'on veut un l systeme ; une fractale  classique ou une fractal sur les complexe
+
+l systeme :
+  un champ pour definir les variable 
+  un champ pour definir les constante ( ne peut etre modifier )
+  un champ pour definir les action de chacune des variable et constante : 
+    avancer reculer tourner saugarde chargement ....
+  un champ pour l'axiom de depart 
+  un champ extensible pour les regle de modification
+  un champ qui permet de selectionner les iteraation voulu 
+fractale classique:
+  
+  triangle 
+  tapis
+  dragon 
+  ...
+
+complexe:
+  ...
+
